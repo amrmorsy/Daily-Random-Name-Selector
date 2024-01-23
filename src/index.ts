@@ -22,7 +22,7 @@ let selectedNameForDay: string | null = null;
 let lastStoredDate: string | null = null;
 
 // Endpoint to get a single name daily
-app.get('/getDailyName', (req: Request, res: Response) => {
+app.get('/', (req: Request, res: Response) => {
     const today: string = new Date().toISOString().split('T')[0]; // Today's date in YYYY-MM-DD format
 
     // Check if the current date is different from the last stored date
