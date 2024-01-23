@@ -10,7 +10,7 @@ interface NameData {
 }
 
 // Read names from the text file
-const namesData: NameData[] = fs.readFileSync(`${__dirname}/../dist/names.txt`, 'utf-8')
+const namesData: NameData[] = fs.readFileSync(`${__dirname}/../data/names.txt`, 'utf-8')
     .split('\n')
     .map((line) => {
         const [name, exclusionDate] = line.split(':');
